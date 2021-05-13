@@ -5,24 +5,31 @@ Santosh Boina - santoshb183@gmail.com
 Sai Ashok Kumar Reddy - saiashokumareddy@gmail.com
 Jayasankar Raju S - muralis2raj@gmail.com
 
-**What is a neural network neuron?**
-A neural network has a set of neurons. A neuron is a small memory storage or a signal, that takes in input weights from other neurons and returns an output weight after using the weights and activation function. Neuron is a function that takes in outputs of the all the neurons in the previous layer and spits out a number between 0 & 1, after an activation function.
 
-**What is the use of the learning rate?**
-Learning rate is a configurable hyperparameter used in the training of neural networks, that has a small positive value ranging from 0.0 to 1.0.  The learning rate controls how quickly the model is adapted to the problem. A small LR requires more training epochs, while the larger LR result in rapid changes and require fewer training epochs.
+Learning rate: 0.1
+![image](https://user-images.githubusercontent.com/28112776/118125070-7f8f6d00-b3c4-11eb-8acd-4ff8f8e093d2.png)
 
-**How are weights initialized?**
-The weight initilizations for neural networks are important and are initilized randomly. However, there are few standard ways we can randomly initilize the weights for effective model training process based on the Activation function used in the nodes.
-For Sigmoid/ TanH activation we use Xavier initilization where we will assume that our layer’s activations are normally distributed around zero.
-The xavier initialization method is calculated as a random number with a uniform probability distribution (U) between the range -(1/sqrt(n)) and 1/sqrt(n), where n is the number of inputs to the node.
-He Weight initilization is calculated as a random number with a Gaussian probability distribution (G) with a mean of 0.0 and a standard deviation of sqrt(2/n), where n is the number of inputs to the node.
+Learning rate: 0.2
+![image](https://user-images.githubusercontent.com/28112776/118125132-92a23d00-b3c4-11eb-9171-9f6c6b849e37.png)
 
-**What is "loss" in a neural network?**
-Loss is a prediction error of the Neural net, it is used to calculate the gradients, which are then used to update weights of the neural net. The method to calculate neural net is called Loss function.
 
-**What is the "chain rule" in gradient flow?**
-While updating the weights in one layer are dependent on the outputs of the previous layers in any neural network. This means that you need to express the derivative of the error with respect to the weights, as a product of many individual derivatives (thereby utilizing the chain rule). This way, the derivative can be used in the aforementioned gradient descent optimization process over several iterations, to arrive at the best weights to minimize the error.
+Learning rate: 0.5
+![image](https://user-images.githubusercontent.com/28112776/118125002-68507f80-b3c4-11eb-9d3b-f685e64ccb5f.png)
 
-Sources:
-https://machinelearningmastery.com/weight-initialization-for-deep-learning-neural-networks/#:~:text=Weight%20Initialization%20for%20Neural%20Networks,-Weight%20initialization%20is&text=Neural%20network%20models%20are%20fit,capable%20of%20making%20useful%20predictions.
-https://qr.ae/pGt4cj
+Learning rate: 0.8
+![image](https://user-images.githubusercontent.com/28112776/118125182-a51c7680-b3c4-11eb-83b2-4371068da76e.png)
+
+
+Learning rate: 1.0
+![image](https://user-images.githubusercontent.com/28112776/118124507-ae591380-b3c3-11eb-8c34-7e095c1579a1.png)
+
+Learning rate: 2.0
+![image](https://user-images.githubusercontent.com/28112776/118125288-c715f900-b3c4-11eb-993b-78230459e8c8.png)
+
+5. What happens to the error graph as learning rate increases?
+Learning rate is helpful in adjusting the weight of the neural network with respect to the loss gradient. At lower values, the travel time towards the downward slope is slower, as the learning rate increases the travel time towards the downward time is faster. The same can be inferred from the above screenshots, ranging from 0.1 to 2.0
+
+![image](https://user-images.githubusercontent.com/28112776/118125811-7521a300-b3c5-11eb-8617-e00d118b8b14.png)
+Source:
+https://towardsdatascience.com/understanding-learning-rates-and-how-it-improves-performance-in-deep-learning-d0d4059c1c10
+
